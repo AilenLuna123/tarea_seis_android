@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'predecir-genero',
+    loadChildren: () => import('./predecir-genero/predecir-genero.module').then( m => m.PredecirGeneroPageModule)
+  },
+  {
+    path: 'predecir-edad',
+    loadChildren: () => import('./predecir-edad/predecir-edad.module').then( m => m.PredecirEdadPageModule)
+  },
+  {
+    path: 'universidades',
+    loadChildren: () => import('./universidades/universidades.module').then( m => m.UniversidadesPageModule)
+  },
 ];
 
 @NgModule({
